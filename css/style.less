@@ -14,10 +14,37 @@ html,body{height:100%;}/*allows for 100% height*/
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', endColorstr='#23538a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	min-height:100%;
 	
+	header{
+		font-family:ColaborateRegular,sans-serif;
+		position: absolute;
+		height:auto;
+		width:100%;
+		background-color:rgba(0,0,0,0.5);
 
+		nav{
+			font-size:1.5em;
+			color:#fff;
+			ul{
+				li{
+					@color: #fff;
+					padding:.35em 1em .5em 0;
+					display: inline;
+					float:right;
+					color: darken(@color, 50%);
+				}
+				#title{
+					float:left;
+					margin-right:5em;
+					margin-left:1em;
+					font-family:ColaborateBoldRegular,sans-serif;
+					color:#fff;
+				}
+			}
+		}
+	}
 	#center{
 		position: absolute;
-		height:400px;
+		height:260px;
 		width:80%;
 		top:50%;
 		left:50%;
@@ -72,3 +99,36 @@ html,body{height:100%;}/*allows for 100% height*/
 		}
 	}
 }
+@media screen and  (min-width:300px) and (max-width:480px){
+body::before{
+        content: "300-480px";
+        font-weight: bold;
+        display: block;
+        text-align: center;
+        background: rgba(255,255,0, 0.9);   /* Semi-transparent yellow */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99;
+}
+#shell{
+	#center{
+		top:40%;
+		#words{
+			text-align:center;
+			p{
+				padding-left:0;
+			}
+
+		}
+		#words p{
+			padding-left:25px;
+		}
+
+		#button{
+			width:100%;
+		}
+	}
+}//end #shell
+}//end media query 300-480

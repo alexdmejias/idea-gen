@@ -34,9 +34,33 @@ body {
 
   min-height: 100%;
 }
+#shell header {
+  font-family: ColaborateRegular, sans-serif;
+  position: absolute;
+  height: auto;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#shell header nav {
+  font-size: 1.5em;
+  color: #fff;
+}
+#shell header nav ul li {
+  padding: .35em 1em .5em 0;
+  display: inline;
+  float: right;
+  color: #808080;
+}
+#shell header nav ul #title {
+  float: left;
+  margin-right: 5em;
+  margin-left: 1em;
+  font-family: ColaborateBoldRegular, sans-serif;
+  color: #fff;
+}
 #shell #center {
   position: absolute;
-  height: 400px;
+  height: 260px;
   width: 80%;
   top: 50%;
   left: 50%;
@@ -87,4 +111,35 @@ body {
   background: -moz-linear-gradient(center top, #dfdfdf 5%, #ededed 100%);
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
   background-color: #dfdfdf;
+}
+@media screen and (min-width: 300px) and (max-width: 480px) {
+  body::before {
+    content: "300-480px";
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    background: rgba(255, 255, 0, 0.9);
+    /* Semi-transparent yellow */
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  #shell #center {
+    top: 40%;
+  }
+  #shell #center #words {
+    text-align: center;
+  }
+  #shell #center #words p {
+    padding-left: 0;
+  }
+  #shell #center #words p {
+    padding-left: 25px;
+  }
+  #shell #center #button {
+    width: 100%;
+  }
 }
