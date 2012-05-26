@@ -21,7 +21,7 @@ $(document).ready(function(){
 				var selected = [];
 				for(var i = 0;i<this.data.length;i++){
 					var r = this.random(this.data[i].length);
-					console.info(r);
+					//console.info(r);
 					selected[i] = this.data[i][r];
 				}
 				return selected;
@@ -29,15 +29,21 @@ $(document).ready(function(){
 
 			show:function(){
 				var idea= Gen.get_item();
-				$('#words p').hide();
+				$('#words p').fadeOut(0);
 
-				$.each(idea, function(key, value) { 
-				  $('#idea'+key+'').text(value).fadeIn();
-				  console.log(value);
-				});
-				// for(var i=0; 3>i;i++){
-				// 	$('#idea'+i+"").text(idea[i]).fadeIn('slow');
-				// }
+				// $.each(idea, function(key, value) { 
+				// 	var timer= 1000;
+				// 	$('#idea'+key+'').text(value).fadeIn(timer*(key+1));
+				// 	console.log(value);
+				// });
+				for(var i=0,l=idea.length;l>i;i++){
+					$('#words p').eq(i).text(idea[i]);
+					console.log('new '+idea[i]);
+
+				}
+				$('#words p').fadeIn('slow');
+
+
 
 			}
 			
