@@ -40,6 +40,7 @@ body {
   width: 80%;
   top: 50%;
   left: 50%;
+  margin-left: -40%;
   margin-top: -50px;
   text-align: center;
 }
