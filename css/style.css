@@ -152,6 +152,8 @@ body {
   }
   #shell #butt_cont {
     width: 100%;
+    position: fixed;
+    bottom: 40px;
   }
   #shell #butt_cont #button {
     width: 250px;
