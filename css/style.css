@@ -94,9 +94,6 @@ body {
   font-style: italic;
   font-weight: 700;
   background-color: #ccc;
-  -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
-  -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
-  box-shadow: inset 0px 1px 0px 0px #ffffff;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
   background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100%);
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
@@ -104,8 +101,6 @@ body {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
-  border: 1px solid #dcdcdc;
-  display: inline-block;
   color: #777777;
   padding: 6px 24px;
   text-decoration: none;
@@ -117,9 +112,9 @@ body {
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
   background-color: #dfdfdf;
 }
-@media screen and (min-width: 300px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   body::before {
-    content: "300-480px";
+    content: "320-480px";
     font-weight: bold;
     display: block;
     text-align: center;
@@ -161,8 +156,7 @@ body {
   }
   #shell #center #button {
     width: 80%;
-    position: absolute;
-    top: 100%;
-    margin-top: 0;
+    position: fixed;
+    bottom: 40px;
   }
 }
