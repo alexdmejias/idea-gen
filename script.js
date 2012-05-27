@@ -45,12 +45,13 @@ $(document).ready(function(){
 			}
 		}
 
+
 		$("input").click(function(){
 			Gen.show();
 		});
 
 		$(window).on('resize load',function() {
-  			alert('width= '+$(window).innerWidth()+' height= '+$(window).innerHeight());
+  			console.log('width= '+$(window).innerWidth()+' height= '+$(window).innerHeight());
 		});
 
 });
