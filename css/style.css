@@ -37,7 +37,6 @@ body {
 }
 #shell header {
   font-family: ColaborateRegular, sans-serif;
-  position: absolute;
   height: auto;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -64,13 +63,10 @@ body {
   color: #808080;
 }
 #shell #center {
-  position: absolute;
-  height: 260px;
   width: 80%;
-  top: 50%;
-  left: 50%;
-  margin-left: -40%;
-  margin-top: -50px;
+  margin: 0 auto;
+  margin-top: 50px;
+  height: 200px;
   text-align: center;
 }
 #shell #center #words p {
@@ -86,7 +82,10 @@ body {
 #shell #center #words p #idea0 {
   padding-left: 0;
 }
-#shell #center #button {
+#shell #butt_cont {
+  text-align: center;
+}
+#shell #butt_cont #button {
   width: 50%;
   margin-top: 3em;
   font-size: 2em;
@@ -106,7 +105,7 @@ body {
   text-decoration: none;
   text-shadow: 1px 1px 0px #ffffff;
 }
-#shell #center #button:hover {
+#shell #butt_cont #button:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
   background: -moz-linear-gradient(center top, #dfdfdf 5%, #ededed 100%);
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
@@ -137,10 +136,7 @@ body {
     font-size: 78%;
   }
   #shell #center {
-    top: 20%;
-    margin-top: 0;
-    left: 0;
-    margin-left: 0;
+    height: 200px;
     width: 100%;
   }
   #shell #center #words {
@@ -154,9 +150,11 @@ body {
     padding: 0 40px;
     font-size: 3.5em;
   }
-  #shell #center #button {
-    width: 80%;
-    position: fixed;
-    bottom: 40px;
+  #shell #butt_cont {
+    width: 100%;
+  }
+  #shell #butt_cont #button {
+    width: 250px;
+    margin: 0 auto;
   }
 }

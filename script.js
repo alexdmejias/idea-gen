@@ -54,5 +54,10 @@ $(document).ready(function(){
   			console.log('width= '+$(window).innerWidth()+' height= '+$(window).innerHeight());
 		});
 
+		$(window).on('load',function(){
+			var butt_text = ["Change the World",'Make a million','Be famous'];
+			$('#button').attr('value',butt_text[Math.floor(Math.random()*butt_text.length)]);
+		});
+
 });
 
