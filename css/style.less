@@ -24,21 +24,24 @@ html,body{height:100%;}/*allows for 100% height*/
 		nav{
 			font-size:1.5em;
 			color:#fff;
+			#title{
+				float:left;
+				margin-right:5em;
+				margin-left:1em;
+				font-family:ColaborateBoldRegular,sans-serif;
+				color:#fff;
+			}			
 			ul{
+				width:100%;
+				text-align: center;
+				padding-bottom: 8px;
 				li{
 					@color: #fff;
-					padding:.35em 1em .5em 0;
+					padding:.35em 1em;
 					display: inline;
-					float:right;
 					color: darken(@color, 50%);
 				}
-				#title{
-					float:left;
-					margin-right:5em;
-					margin-left:1em;
-					font-family:ColaborateBoldRegular,sans-serif;
-					color:#fff;
-				}
+
 			}
 		}
 	}
@@ -54,13 +57,13 @@ html,body{height:100%;}/*allows for 100% height*/
 		
 		#words p{
 			display: inline;
-		    padding-left:50px;
+			padding-left:50px;
 			font-family: ColaborateThinRegular, sans-serif;
 			font-weight:400;
 			font-size:5em;
 			color:#fff;
-		    text-shadow: 1px 1px 6px #222;
-		    filter: dropshadow(color=#de39de, offx=1, offy=1);
+			text-shadow: 1px 1px 6px #222;
+			filter: dropshadow(color=#de39de, offx=1, offy=1);
 			
 			#idea0{
 				padding-left:0;
@@ -101,20 +104,37 @@ html,body{height:100%;}/*allows for 100% height*/
 }
 @media screen and  (min-width:300px) and (max-width:480px){
 body::before{
-        content: "300-480px";
-        font-weight: bold;
-        display: block;
-        text-align: center;
-        background: rgba(255,255,0, 0.9);   /* Semi-transparent yellow */
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 99;
+		content: "300-480px";
+		font-weight: bold;
+		display: block;
+		text-align: center;
+		background: rgba(255,255,0, 0.9);   /* Semi-transparent yellow */
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 99;
 }
 #shell{
+	header{
+		nav{
+			#title{
+				padding:10px 0 0 0;
+				text-align: center;
+				width:100%;
+				margin: 0;
+			}	
+			ul{
+				li{
+					font-size:78%;
+				}
+
+			}
+		}
+	}
 	#center{
-		top:40%;
+		top:20%;
+		margin-top:0;
 		#words{
 			text-align:center;
 			p{
@@ -123,11 +143,14 @@ body::before{
 
 		}
 		#words p{
-			padding-left:25px;
+			padding:0 13px;
 		}
 
 		#button{
 			width:100%;
+			position: absolute;
+			top:110%;
+			margin-top:0;
 		}
 	}
 }//end #shell

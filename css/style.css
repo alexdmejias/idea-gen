@@ -45,18 +45,22 @@ body {
   font-size: 1.5em;
   color: #fff;
 }
-#shell header nav ul li {
-  padding: .35em 1em .5em 0;
-  display: inline;
-  float: right;
-  color: #808080;
-}
-#shell header nav ul #title {
+#shell header nav #title {
   float: left;
   margin-right: 5em;
   margin-left: 1em;
   font-family: ColaborateBoldRegular, sans-serif;
   color: #fff;
+}
+#shell header nav ul {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 8px;
+}
+#shell header nav ul li {
+  padding: .35em 1em;
+  display: inline;
+  color: #808080;
 }
 #shell #center {
   position: absolute;
@@ -127,8 +131,18 @@ body {
     right: 0;
     z-index: 99;
   }
+  #shell header nav #title {
+    padding: 10px 0 0 0;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+  }
+  #shell header nav ul li {
+    font-size: 78%;
+  }
   #shell #center {
-    top: 40%;
+    top: 20%;
+    margin-top: 0;
   }
   #shell #center #words {
     text-align: center;
@@ -137,9 +151,12 @@ body {
     padding-left: 0;
   }
   #shell #center #words p {
-    padding-left: 25px;
+    padding: 0 13px;
   }
   #shell #center #button {
     width: 100%;
+    position: absolute;
+    top: 110%;
+    margin-top: 0;
   }
 }
