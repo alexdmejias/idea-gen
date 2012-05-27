@@ -42,17 +42,16 @@ $(document).ready(function(){
 
 				}
 				$('#words p').fadeIn('slow');
-
-
-
 			}
-			
-
-
 		}
 
 		$("input").click(function(){
 			Gen.show();
 		});
+
+		$(window).on('resize load',function() {
+  			console.log('width= '+$(window).width()+' height= '+$(window).width());
+		});
+
 });
 
