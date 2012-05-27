@@ -50,7 +50,7 @@ $(document).ready(function(){
 		});
 
 		$(window).on('resize load',function() {
-  			alert('width= '+$(window).width()+' height= '+$(window).width());
+  			alert('width= '+$(window).width()+' height= '+$(window).height());
 		});
 
 });
