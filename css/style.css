@@ -139,6 +139,7 @@ body {
   #shell #center {
     height: 200px;
     width: 100%;
+    margin-top: 25px;
   }
   #shell #center #words {
     text-align: center;
@@ -160,5 +161,15 @@ body {
     width: 250px;
     margin: 0 auto;
     font-size: 120%;
+  }
+}
+@media screen and (orientation: landscape) and (min-width: 320px) and (max-width: 480px) {
+  #shell #cont #center {
+    margin-top: 0;
+  }
+  #shell #cont #center #words {
+    margin: 0;
+    font-size: 2.5em;
+    margin: 15px;
   }
 }
