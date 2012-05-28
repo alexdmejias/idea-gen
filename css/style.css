@@ -133,7 +133,8 @@ body {
     margin: 0;
   }
   #shell header nav ul li {
-    font-size: 78%;
+    font-size: 75%;
+    padding: .35em .75em;
   }
   #shell #center {
     height: 200px;
@@ -153,7 +154,7 @@ body {
   #shell #butt_cont {
     width: 100%;
     position: fixed;
-    bottom: 40px;
+    bottom: 6%;
   }
   #shell #butt_cont #button {
     width: 250px;
