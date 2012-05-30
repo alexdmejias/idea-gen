@@ -127,7 +127,6 @@ html, body {
     text-align: center;
     background: rgba(255, 255, 0, 0.9);
     /* Semi-transparent yellow */
-  
     position: absolute;
     top: 0;
     left: 0;
@@ -158,8 +157,6 @@ html, body {
   }
   #shell #center #words p {
     padding-left: 0;
-  }
-  #shell #center #words p {
     padding: 0 3%;
     font-size: 3.5em;
   }
@@ -182,7 +179,6 @@ html, body {
     text-align: center;
     background: rgba(255, 255, 0, 0.9);
     /* Semi-transparent yellow */
-  
     position: absolute;
     top: 0;
     left: 0;
@@ -208,8 +204,6 @@ html, body {
     display: block;
     text-align: center;
     background: rgba(255, 0, 0, 0.5);
-    /* Semi-transparent yellow */
-  
     position: absolute;
     top: 0;
     left: 0;
@@ -231,5 +225,18 @@ html, body {
     left: 0;
     right: 0;
     z-index: 99;
+  }
+  #shell #center {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #shell #center #words p {
+    padding: 0 25px;
+    font-size: 1000%;
+  }
+  #shell #butt_cont #button {
+    position: absolute;
+    bottom: 5%;
   }
 }
