@@ -43,7 +43,7 @@ html,body{height:100%;}/*allows for 100% height*/
 			}			
 			ul{
 				width:100%;
-				text-align: center;
+				text-align: right;
 				padding-bottom: 8px;
 				li{
 					@color: #fff;
@@ -136,6 +136,7 @@ body::before{
 				margin: 0;
 			}	
 			ul{
+				text-align: center;
 				li{
 					font-size:75%;
 					padding: .35em .75em;
@@ -230,3 +231,18 @@ body::before{
 }
 
 }//end media quesry 481-767
+
+@media screen and (min-width:768px) and (max-width:1024px){
+body::before{
+	content: "768-1024";
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	background: rgba(0,255,0, 0.5);   /* Semi-transparent yellow */
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+}
+}// end media query 768-1024

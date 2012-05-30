@@ -62,7 +62,7 @@ html, body {
 }
 #shell header nav ul {
   width: 100%;
-  text-align: center;
+  text-align: right;
   padding-bottom: 8px;
 }
 #shell header nav ul li {
@@ -140,6 +140,9 @@ html, body {
     width: 100%;
     margin: 0;
   }
+  #shell header nav ul {
+    text-align: center;
+  }
   #shell header nav ul li {
     font-size: 75%;
     padding: .35em .75em;
@@ -205,6 +208,22 @@ html, body {
     display: block;
     text-align: center;
     background: rgba(255, 0, 0, 0.5);
+    /* Semi-transparent yellow */
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+}
+@media screen and (min-width:768px) and (max-width:1024px) {
+  body::before {
+    content: "768-1024";
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    background: rgba(0, 255, 0, 0.5);
     /* Semi-transparent yellow */
   
     position: absolute;

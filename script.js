@@ -52,7 +52,7 @@ $(document).ready(function(){
 
 		$(window).on('resize load',function() {
   			console.log('width= '+$(window).innerWidth()+' height= '+$(window).innerHeight());
-  			$('#size').text($(window).innerWidth());
+  			$('#size').text($(window).innerWidth() +' X '+$(window).innerHeight());
 		});
 
 		$(window).on('load',function(){
