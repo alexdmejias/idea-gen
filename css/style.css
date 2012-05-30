@@ -164,6 +164,20 @@ html, body {
   }
 }
 @media screen and (orientation:landscape) and (min-width:320px) and (max-width:480px) {
+  body::before {
+    content: " landscape 320-480px";
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    background: rgba(255, 255, 0, 0.9);
+    /* Semi-transparent yellow */
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
   #shell #cont #center {
     margin-top: 0;
     height: auto;
@@ -174,5 +188,21 @@ html, body {
   }
   #shell #cont #center #words p {
     font-size: 2.5em;
+  }
+}
+@media screen and (min-width:481px) and (max-width:767px) {
+  body::before {
+    content: "481-767";
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    background: rgba(255, 0, 0, 0.5);
+    /* Semi-transparent yellow */
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
   }
 }
