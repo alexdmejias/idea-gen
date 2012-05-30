@@ -3,6 +3,14 @@
 @import 'font.css';
 
 html,body{height:100%;}/*allows for 100% height*/
+#size{
+	background:red;
+	padding:3px;
+	color:white;
+	position: absolute;
+	bottom:0;
+	right:0;
+}
 #shell{
 	overflow: hidden;
 	width:100%;		
@@ -102,7 +110,9 @@ html,body{height:100%;}/*allows for 100% height*/
 			background-color:#dfdfdf;
 		}
 	}//#butt_cont
-}
+}// end #shell
+
+
 @media screen and (min-width:320px) and (max-width:480px){
 body::before{
 		content: "320-480px";

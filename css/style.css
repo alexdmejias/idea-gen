@@ -6,6 +6,14 @@ html, body {
   height: 100%;
 }
 /*allows for 100% height*/
+#size {
+  background: red;
+  padding: 3px;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 #shell {
   overflow: hidden;
   width: 100%;
