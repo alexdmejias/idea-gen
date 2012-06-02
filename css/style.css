@@ -238,5 +238,6 @@ html, body {
   #shell #butt_cont #button {
     position: absolute;
     bottom: 5%;
+    left: 25%;
   }
 }
