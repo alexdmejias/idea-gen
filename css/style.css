@@ -239,5 +239,6 @@ html, body {
     position: absolute;
     bottom: 5%;
     left: 25%;
+    margin-top: 0;
   }
 }
