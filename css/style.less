@@ -10,7 +10,7 @@ html,body{height:100%;}/*allows for 100% height*/
 	position: absolute;
 	bottom:0;
 	right:0;
-}
+}s
 #shell{
 	overflow: hidden;
 	width:100%;		
@@ -26,7 +26,6 @@ html,body{height:100%;}/*allows for 100% height*/
 	
 	header{
 		font-family:ColaborateRegular,sans-serif;
-		// position: absolute;
 		height:auto;
 		width:100%;
 		background-color:rgba(0,0,0,0.5);
@@ -108,7 +107,7 @@ html,body{height:100%;}/*allows for 100% height*/
 }// end #shell
 
 
-@media screen and (min-width:320px) and (max-width:480px){
+@media screen and (max-width:480px){
 body::before{content: "320-480px"; font-weight: bold; display: block; text-align: center; background: rgba(255,255,0, 0.9);   /* Semi-transparent yellow */ position: absolute; top: 0; left: 0; right: 0; z-index: 99; } #shell{
 	header{
 		nav{
@@ -146,7 +145,7 @@ body::before{content: "320-480px"; font-weight: bold; display: block; text-align
 		position: fixed;
 		bottom:6%;
 		#button{
-			width:250px;
+			width:80%;
 			margin:0 auto;
 			font-size:120%;
 		}
@@ -219,7 +218,7 @@ body::before{
 			bottom:5%;
 			left:25%;
 			margin-top:0;
-			
+
 		}
 	}
 }//end #shell
