@@ -1,6 +1,9 @@
 @import 'reset.css';
 
 @import 'font.css';
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 html, body {
   height: 100%;
 }
@@ -211,6 +214,25 @@ html, body {
     right: 0;
     z-index: 99;
   }
+  #shell #center {
+    width: 95%;
+    margin: 15px auto 0;
+    text-align: center;
+  }
+  #shell #center #words p {
+    padding: 0 25px;
+    font-size: 800%;
+  }
+  #shell #butt_cont {
+    width: 100%;
+    position: fixed;
+    bottom: 6%;
+  }
+  #shell #butt_cont #button {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 150%;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   body::before {
@@ -220,7 +242,6 @@ html, body {
     text-align: center;
     background: rgba(0, 255, 0, 0.5);
     /* Semi-transparent yellow */
-  
     position: absolute;
     top: 0;
     left: 0;
@@ -229,7 +250,7 @@ html, body {
   }
   #shell #center {
     width: 95%;
-    margin: 0 auto;
+    margin: 15px auto 0;
     text-align: center;
   }
   #shell #center #words p {

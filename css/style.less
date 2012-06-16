@@ -3,6 +3,10 @@
 @import 'font.css';
 
 ///////////////////////////////////////////////////////////////////////////////
+//others
+///////////////////////////////////////////////////////////////////////////////
+ * {-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+///////////////////////////////////////////////////////////////////////////////
 //mixins
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -187,22 +191,6 @@ body::before{content: " landscape 320-480px"; font-weight: bold; display: block;
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @media screen and (min-width:481px) and (max-width:767px){
 body::before{content: "481-767"; font-weight: bold; display: block; text-align: center; background: rgba(255,0,0, 0.5); position: absolute; top: 0; left: 0; right: 0; z-index: 99; }
-}//end media quesry 481-767
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@media screen and (min-width:768px) and (max-width:1024px){
-body::before{
-	content: "768-1024";
-	font-weight: bold;
-	display: block;
-	text-align: center;
-	background: rgba(0,255,0, 0.5);   /* Semi-transparent yellow */
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 99;
-}
 #shell{
 	header{
 		nav{
@@ -216,7 +204,46 @@ body::before{
 	}
 	#center{
 			width:95%;
+			margin:15px auto 0;
+			text-align: center;
+		#words{
+			p{
+				padding:0 25px;
+				font-size:800%;
+			}
+		}
+	}// end #center
+	#butt_cont{
+		width:100%;
+		position: fixed;
+		bottom:6%;
+		#button{
+			width:80%;
 			margin:0 auto;
+			font-size:150%;
+		}
+	}
+}//end #shell
+}// end media query 768-1024
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media screen and (min-width:768px) and (max-width:1024px){
+body::before{content: "768-1024"; font-weight: bold; display: block; text-align: center; background: rgba(0,255,0, 0.5);   /* Semi-transparent yellow */ position: absolute; top: 0; left: 0; right: 0; z-index: 99; } 
+#shell{
+	header{
+		nav{
+			#title{
+			}
+			ul{
+				li{
+				}
+			}
+		}
+	}
+	#center{
+			width:95%;
+			margin:15px auto 0;
 			text-align: center;
 		#words{
 			p{
