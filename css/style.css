@@ -221,7 +221,7 @@ html, body {
   }
   #shell #center #words p {
     padding: 0 25px;
-    font-size: 800%;
+    font-size: 500%;
   }
   #shell #butt_cont {
     width: 100%;
@@ -256,6 +256,39 @@ html, body {
   #shell #center #words p {
     padding: 0 25px;
     font-size: 800%;
+  }
+  #shell #butt_cont {
+    width: 100%;
+    position: fixed;
+    bottom: 6%;
+  }
+  #shell #butt_cont #button {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 250%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  body::before {
+    content: "1025-";
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    background: rgba(255, 255, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  #shell #center {
+    width: 95%;
+    margin: 15px auto 0;
+    text-align: center;
+  }
+  #shell #center #words p {
+    padding: 0 25px;
+    font-size: 1000%;
   }
   #shell #butt_cont {
     width: 100%;

@@ -122,7 +122,8 @@ header{
 		}
 	}//#butt_cont
 }// end #shell
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @media screen and (max-width:480px){
 body::before{content: "320-480px"; font-weight: bold; display: block; text-align: center; background: rgba(255,255,0, 0.9);   /* Semi-transparent yellow */ position: absolute; top: 0; left: 0; right: 0; z-index: 99; } #shell{
@@ -169,6 +170,8 @@ body::before{content: "320-480px"; font-weight: bold; display: block; text-align
 	}
 }//end #shell
 }//end media query 300-480
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @media screen and (orientation:landscape) and (min-width:320px) and (max-width:480px){
 body::before{content: " landscape 320-480px"; font-weight: bold; display: block; text-align: center; background: rgba(255,255,0, 0.9);   /* Semi-transparent yellow */ position: absolute; top: 0; left: 0; right: 0; z-index: 99; } #shell{
@@ -189,6 +192,7 @@ body::before{content: " landscape 320-480px"; font-weight: bold; display: block;
 }// end media query landscape + 320-480
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 @media screen and (min-width:481px) and (max-width:767px){
 body::before{content: "481-767"; font-weight: bold; display: block; text-align: center; background: rgba(255,0,0, 0.5); position: absolute; top: 0; left: 0; right: 0; z-index: 99; }
 #shell{
@@ -209,7 +213,7 @@ body::before{content: "481-767"; font-weight: bold; display: block; text-align: 
 		#words{
 			p{
 				padding:0 25px;
-				font-size:800%;
+				font-size:500%;
 			}
 		}
 	}// end #center
@@ -228,6 +232,7 @@ body::before{content: "481-767"; font-weight: bold; display: block; text-align: 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 @media screen and (min-width:768px) and (max-width:1024px){
 body::before{content: "768-1024"; font-weight: bold; display: block; text-align: center; background: rgba(0,255,0, 0.5);   /* Semi-transparent yellow */ position: absolute; top: 0; left: 0; right: 0; z-index: 99; } 
 #shell{
@@ -259,10 +264,46 @@ body::before{content: "768-1024"; font-weight: bold; display: block; text-align:
 		#button{
 			width:80%;
 			margin:0 auto;
-			font-size:300%;
+			font-size:250%;
 		}
 	}
 }//end #shell
 }// end media query 768-1024
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media screen and (min-width:1025px){
+body::before{content: "1025-"; font-weight: bold; display: block; text-align: center; background: rgba(255,255,0, 0.5); position: absolute; top: 0; left: 0; right: 0; z-index: 99; }
+#shell{
+	header{
+		nav{
+			#title{
+			}
+			ul{
+				li{
+				}
+			}
+		}
+	}
+	#center{
+			width:95%;
+			margin:15px auto 0;
+			text-align: center;
+		#words{
+			p{
+				padding:0 25px;
+				font-size:1000%;
+			}
+		}
+	}// end #center
+	#butt_cont{
+		width:100%;
+		position: fixed;
+		bottom:6%;
+		#button{
+			width:80%;
+			margin:0 auto;
+			font-size:300%;
+		}
+	}
+}//end #shell
+}//end @media 1025-
