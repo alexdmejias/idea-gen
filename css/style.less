@@ -1,13 +1,29 @@
 //simpless:!minify
 @import 'reset.css';
 @import 'font.css';
+@import 'zocial.css';
 
 ///////////////////////////////////////////////////////////////////////////////
 //others
 ///////////////////////////////////////////////////////////////////////////////
  * {-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+
 ///////////////////////////////////////////////////////////////////////////////
-//mixins
+//MIXINS
+////indicator
+.indicator(@msg:"indicator",@r:0,@g:0,@b:0){
+	content: @msg; 
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	background: rgba(@r,@g,@b, 0);
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 99;
+    display: none;
+}
 ///////////////////////////////////////////////////////////////////////////////
 
 
@@ -37,6 +53,7 @@ header{
 		height:auto;
 		width:100%;
 		background-color:rgba(0,0,0,0.5);
+		padding: 8px 0;
 
 		nav{
 			font-size:1.5em;
@@ -45,19 +62,30 @@ header{
 				float:left;
 				margin-right:5em;
 				margin-left:1em;
-				font-family:ColaborateBoldRegular,sans-serif;
 				color:#fff;
+				font-family:ColaborateBoldRegular,sans-serif;
+				.sub{
+					font-family:ColaborateThinRegular,sans-serif;
+				}
 			}
 			ul{
 				width:100%;
 				text-align: right;
-				padding-bottom: 8px;
-
 				li{
-					@color: #fff;
-					padding:.35em 1em;
+					
+					padding:0 10px;
 					display: inline;
-					color: darken(@color, 50%);
+					a{
+						color:#fff;
+						text-decoration:none;
+						&:hover{
+							color:#fff;
+						}
+					}
+					.zocial{
+ 						font-size:10px;
+ 						padding:0;
+ 					}
 				}
 			}
 		}
@@ -126,7 +154,10 @@ header{
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @media screen and (max-width:480px){
-body::before{content: "320-480px"; font-weight: bold; display: block; text-align: center; background: rgba(255,255,0, 0.9);   /* Semi-transparent yellow */ position: absolute; top: 0; left: 0; right: 0; z-index: 99; } #shell{
+body::before{
+	.indicator("max-width:480",255,255,255);
+}
+#shell{
 	header{
 		nav{
 			#title{
@@ -174,7 +205,9 @@ body::before{content: "320-480px"; font-weight: bold; display: block; text-align
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @media screen and (orientation:landscape) and (min-width:320px) and (max-width:480px){
-body::before{content: " landscape 320-480px"; font-weight: bold; display: block; text-align: center; background: rgba(255,255,0, 0.9);   /* Semi-transparent yellow */ position: absolute; top: 0; left: 0; right: 0; z-index: 99; } #shell{
+body::before{
+	.indicator("landscape 320-480",255,0,0);
+}
 	#cont{
 		#center{
 			margin-top:0;
@@ -188,13 +221,15 @@ body::before{content: " landscape 320-480px"; font-weight: bold; display: block;
 			}
 		}
 	}
-}
+
 }// end media query landscape + 320-480
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @media screen and (min-width:481px) and (max-width:767px){
-body::before{content: "481-767"; font-weight: bold; display: block; text-align: center; background: rgba(255,0,0, 0.5); position: absolute; top: 0; left: 0; right: 0; z-index: 99; }
+body::before{
+	.indicator("481-797",0,255,0);
+}
 #shell{
 	header{
 		nav{
@@ -234,7 +269,9 @@ body::before{content: "481-767"; font-weight: bold; display: block; text-align: 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @media screen and (min-width:768px) and (max-width:1024px){
-body::before{content: "768-1024"; font-weight: bold; display: block; text-align: center; background: rgba(0,255,0, 0.5);   /* Semi-transparent yellow */ position: absolute; top: 0; left: 0; right: 0; z-index: 99; } 
+body::before{
+	.indicator("768-1024",0,0,255);
+}
 #shell{
 	header{
 		nav{
@@ -272,7 +309,9 @@ body::before{content: "768-1024"; font-weight: bold; display: block; text-align:
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @media screen and (min-width:1025px){
-body::before{content: "1025-"; font-weight: bold; display: block; text-align: center; background: rgba(255,255,0, 0.5); position: absolute; top: 0; left: 0; right: 0; z-index: 99; }
+body::before{
+	.indicator("1025-",255,0,255);
+}
 #shell{
 	header{
 		nav{

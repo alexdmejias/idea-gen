@@ -1,6 +1,8 @@
 @import 'reset.css';
 
 @import 'font.css';
+
+@import 'zocial.css';
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -50,6 +52,7 @@ html, body {
   height: auto;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  padding: 8px 0;
 }
 #shell header nav {
   font-size: 1.5em;
@@ -59,18 +62,30 @@ html, body {
   float: left;
   margin-right: 5em;
   margin-left: 1em;
-  font-family: ColaborateBoldRegular, sans-serif;
   color: #fff;
+  font-family: ColaborateBoldRegular, sans-serif;
+}
+#shell header nav #title .sub {
+  font-family: ColaborateThinRegular, sans-serif;
 }
 #shell header nav ul {
   width: 100%;
   text-align: right;
-  padding-bottom: 8px;
 }
 #shell header nav ul li {
-  padding: .35em 1em;
+  padding: 0 10px;
   display: inline;
-  color: #808080;
+}
+#shell header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+#shell header nav ul li a:hover {
+  color: #fff;
+}
+#shell header nav ul li .zocial {
+  font-size: 10px;
+  padding: 0;
 }
 #shell #center {
   width: 80%;
@@ -125,17 +140,17 @@ html, body {
 }
 @media screen and (max-width: 480px) {
   body::before {
-    content: "320-480px";
+    content: "max-width:480";
     font-weight: bold;
     display: block;
     text-align: center;
-    background: rgba(255, 255, 0, 0.9);
-    /* Semi-transparent yellow */
+    background: rgba(255, 255, 255, 0);
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 99;
+    display: none;
   }
   #shell header nav #title {
     padding: 10px 0 0 0;
@@ -177,42 +192,43 @@ html, body {
 }
 @media screen and (orientation: landscape) and (min-width: 320px) and (max-width: 480px) {
   body::before {
-    content: " landscape 320-480px";
+    content: "landscape 320-480";
     font-weight: bold;
     display: block;
     text-align: center;
-    background: rgba(255, 255, 0, 0.9);
-    /* Semi-transparent yellow */
+    background: rgba(255, 0, 0, 0);
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 99;
+    display: none;
   }
-  #shell #cont #center {
+  #cont #center {
     margin-top: 0;
     height: auto;
   }
-  #shell #cont #center #words {
+  #cont #center #words {
     margin: 0;
     margin: 15px;
   }
-  #shell #cont #center #words p {
+  #cont #center #words p {
     font-size: 2.5em;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 767px) {
   body::before {
-    content: "481-767";
+    content: "481-797";
     font-weight: bold;
     display: block;
     text-align: center;
-    background: rgba(255, 0, 0, 0.5);
+    background: rgba(0, 255, 0, 0);
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 99;
+    display: none;
   }
   #shell #center {
     width: 95%;
@@ -240,13 +256,13 @@ html, body {
     font-weight: bold;
     display: block;
     text-align: center;
-    background: rgba(0, 255, 0, 0.5);
-    /* Semi-transparent yellow */
+    background: rgba(0, 0, 255, 0);
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 99;
+    display: none;
   }
   #shell #center {
     width: 95%;
@@ -274,12 +290,13 @@ html, body {
     font-weight: bold;
     display: block;
     text-align: center;
-    background: rgba(255, 255, 0, 0.5);
+    background: rgba(255, 0, 255, 0);
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 99;
+    display: none;
   }
   #shell #center {
     width: 95%;
