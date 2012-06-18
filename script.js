@@ -40,7 +40,7 @@ $(document).ready(function(){
 		};
 
 
-		$("input").click(function(){
+		$("input").on('click',function(){
 			Gen.show();
 		});
 
@@ -52,7 +52,7 @@ $(document).ready(function(){
 		$(window).on('load',function(){
 			var butt_text = ["Change the World",'Make a million','Be famous','Start a Business','Make a startup','Do something','New weekend project'];
 			$('#button').attr('value',butt_text[Math.floor(Math.random()*butt_text.length)]);
-			$('#myModal').modal('hide');
+			// $('#myModal').modal('hide');
 		});
 });
 
