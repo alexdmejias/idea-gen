@@ -67,14 +67,15 @@ $(document).ready(function(){
 		$('a.modal_link').on('click',function(){
 			obj = $('#modal_'+$(this).attr('id'));
 			if(obj.css('opacity')==0){
+				$('#cont .modal').hide();
 				$('.modal').transition({opacity:'0'});
-				obj.transition({opacity:'1'});
+				obj.show().transition({opacity:'1'});
 			} else {
-				obj.transition({opacity:'0'});
+				obj.show().transition({opacity:'0'});
 			}
 		});
 		$('#modal_share h3.close,#modal_about .close').on('click',function(){
-			$('#cont .modal').transition({opacity:'0'});
+			$('#cont .modal').transition({opacity:'0'}).hide();
 		});
 
 });
