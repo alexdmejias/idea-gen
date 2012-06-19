@@ -54,5 +54,21 @@ $(document).ready(function(){
 			$('#button').attr('value',butt_text[Math.floor(Math.random()*butt_text.length)]);
 			// $('#myModal').modal('hide');
 		});
+
+		$('#share').on('click',function(){
+			if($('#myModal').css('opacity')==0){
+				$('#myModal').transition({ opacity: '1' });
+			 	console.log('show');
+			}else{
+				$('#myModal').transition({ opacity: '0' });
+			}
+		});
+		// $('#share').toggle(function(){
+		// 	$('#myModal').transition({ opacity: '1' });
+		// 	console.log('show');
+		// },function(){
+		// 	$('#myModal').transition({ opacity: '0' });
+		// 	console.log('off');
+		// });
 });
 
