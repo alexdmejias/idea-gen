@@ -4,23 +4,59 @@
 @import 'zocial.css';
 
 ///////////////////////////////////////////////////////////////////////////////
-//others
+//defaults & others
 ///////////////////////////////////////////////////////////////////////////////
- * {-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
-.modal{
-	// display:none;
+ * {
+ 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+ 	font-family:ColaborateRegular;
 }
-#myModal{
+
+a{
+	text-decoration:none;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//testing
+///////////////////////////////////////////////////////////////////////////////
+.modal{
+	color:#fff;
 	width:100%;
-	height:100px;
 	background-color:rgba(0,0,0,0.9);
 	position:absolute;
-	top:50%;
+	top:10.1%;
 	left:0px;
 	opacity: 0;
 	-moz-opacity: 0;
 	filter:alpha(opacity=0);
-
+	.modal_content{
+		width:50%;
+		margin:0 auto;
+		height:100%;
+		padding:30px 0;
+		.modal_title{
+			font-family: ColaborateBoldRegular, sans-serif;
+			font-size:1.5em;
+			height:24px;
+			h3{
+				float:left;
+				&.close{
+					float:right;
+					a{
+						// text-decoration:none;
+						color: #fff;
+						float:right;
+						font-family: ColaborateThinRegular, sans-serif;
+					}
+				}
+			}
+		}
+		.modal_body{
+			text-align: center;
+			a{
+				margin:25px 5% 0;
+			}
+		}
+	}
 }
 ///////////////////////////////////////////////////////////////////////////////
 //MIXINS
@@ -41,7 +77,10 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 
-html,body{height:100%;}/*allows for 100% height*/
+html,body{
+	height:100%;/*allows for 100% height*/
+	font-family:ColaborateRegular;
+}
 #size{
 	background:red;
 	padding:3px;
@@ -63,10 +102,10 @@ html,body{height:100%;}/*allows for 100% height*/
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', endColorstr='#23538a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	min-height:100%;
 header{
-		font-family:ColaborateRegular,sans-serif;
+		// font-family:ColaborateRegular,sans-serif;
 		height:auto;
 		width:100%;
-		background-color:rgba(0,0,0,0.5);
+		background-color:rgba(0,0,0,0.9);
 		padding: 8px 0;
 
 		nav{
@@ -80,6 +119,7 @@ header{
 				font-family:ColaborateBoldRegular,sans-serif;
 				.sub{
 					font-family:ColaborateThinRegular,sans-serif;
+					font-size:14px;
 				}
 			}
 			ul{
@@ -91,7 +131,7 @@ header{
 					display: inline;
 					a{
 						color:#fff;
-						text-decoration:none;
+						// text-decoration:none;
 						&:hover{
 							color:#fff;
 						}
@@ -147,7 +187,7 @@ header{
 			border-radius:6px;
 			color:#777777;
 			padding:6px 24px;
-			text-decoration:none;
+			// text-decoration:none;
 			text-shadow:1px 1px 0px #ffffff;
 
 			width:80%;

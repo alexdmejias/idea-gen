@@ -17,13 +17,8 @@
 			<nav>
 				<h1 id="title">idea generator<span class="sub"> by Alex Mejias</span></h1>
 				<ul>
-					<!-- <li><a href="#" data-reveal-id="modalAbout">About</a></li> -->
-					<!-- <li><a href="#" data-reveal-id="modalShare">Share it</a></li> -->
-					<a class="btn" data-toggle="modal" href="#myModal" id="share">Launch Modal</a>
-					<!-- <li><a href="#" class="zocial icon facebook"></a></li> -->
-					<!-- <li><a href="#" class="zocial icon twitter"></a></li> -->
-					<!-- <li><a href="#" class="zocial icon github"></a></li> -->
-					<!-- <li><a href="#" class="zocial icon flattr"></a></li> -->
+					<li><a class="modal_link" href="#" id="about">About</a></li>
+					<li><a class="modal_link" href="#" id="share">Share</a></li>
 					<!-- <li><a href="https://twitter.com/share" class="twitter-share-button" data-url="https://alexismejias.com/idea_gen" data-via="alme1304" data-lang="en" data-text="Check out this cool new idea generator" data-count="left">Tweet</a></li> -->
 				</ul>
 			</nav>
@@ -38,9 +33,33 @@
 			</div>
 			<div id="butt_cont">
 				<input type="button" value="" id="button"/>
-			</div>
-		</div>
-	</div>
+			</div><!-- end #butt_cont -->
+			<div class="modal" id="modal_about">
+				<div class="modal_content">
+					<div class="modal_title">
+						<h3>About</h3>
+						<h3 class="close"><a href="#">close</a></h3>
+					</div>
+					<div class="modal_body">
+
+					</div>
+				</div>
+			</div><!-- end #modal_about -->
+			<div class="modal" id="modal_share">
+				<div class="modal_content">
+					<div class="modal_title">
+						<h3>Share it!</h3>
+						<h3 class="close"><a href="#">close</a></h3>
+					</div>
+					<div class="modal_body">
+						<a href="#" class="zocial twitter">follow</a>
+						<a href="#" class="zocial github">watch</a>
+						<a href="#" class="zocial facebook">show it</a>
+					</div>
+				</div>
+			</div><!-- end #modal_share -->
+		</div><!-- end #cont -->
+	</div><!-- end #shell -->
 	<p id="size"></p>
 
 
@@ -56,19 +75,7 @@
     <a href="#" class="zocial github">github</a>
 </div> -->
 
-<div class="modal hide" id="myModal">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal">×</button>
-    <h3>Modal header</h3>
-  </div>
-  <div class="modal-body">
-    <p>One fine body…</p>
-  </div>
-  <div class="modal-footer">
-    <a href="#" class="btn" data-dismiss="modal">Close</a>
-    <a href="#" class="btn btn-primary">Save changes</a>
-  </div>
-</div>
+
 
 
 

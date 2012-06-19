@@ -5,22 +5,56 @@
 @import 'zocial.css';
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: ColaborateRegular;
 }
-#myModal {
+a {
+  text-decoration: none;
+}
+.modal {
+  color: #fff;
   width: 100%;
-  height: 100px;
   background-color: rgba(0, 0, 0, 0.9);
   position: absolute;
-  top: 50%;
+  top: 10.1%;
   left: 0px;
   opacity: 0;
   -moz-opacity: 0;
   filter: alpha(opacity=0);
 }
+.modal .modal_content {
+  width: 50%;
+  margin: 0 auto;
+  height: 100%;
+  padding: 30px 0;
+}
+.modal .modal_content .modal_title {
+  font-family: ColaborateBoldRegular, sans-serif;
+  font-size: 1.5em;
+  height: 24px;
+}
+.modal .modal_content .modal_title h3 {
+  float: left;
+}
+.modal .modal_content .modal_title h3.close {
+  float: right;
+}
+.modal .modal_content .modal_title h3.close a {
+  color: #fff;
+  float: right;
+  font-family: ColaborateThinRegular, sans-serif;
+}
+.modal .modal_content .modal_body {
+  text-align: center;
+}
+.modal .modal_content .modal_body a {
+  margin: 25px 5% 0;
+}
 html, body {
   height: 100%;
+  /*allows for 100% height*/
+
+  font-family: ColaborateRegular;
 }
-/*allows for 100% height*/
 #size {
   background: red;
   padding: 3px;
@@ -59,10 +93,9 @@ html, body {
   min-height: 100%;
 }
 #shell header {
-  font-family: ColaborateRegular, sans-serif;
   height: auto;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
   padding: 8px 0;
 }
 #shell header nav {
@@ -78,6 +111,7 @@ html, body {
 }
 #shell header nav #title .sub {
   font-family: ColaborateThinRegular, sans-serif;
+  font-size: 14px;
 }
 #shell header nav ul {
   width: 100%;
@@ -89,7 +123,6 @@ html, body {
 }
 #shell header nav ul li a {
   color: #fff;
-  text-decoration: none;
 }
 #shell header nav ul li a:hover {
   color: #fff;
@@ -137,7 +170,6 @@ html, body {
   border-radius: 6px;
   color: #777777;
   padding: 6px 24px;
-  text-decoration: none;
   text-shadow: 1px 1px 0px #ffffff;
   width: 80%;
   margin: 0 auto;
