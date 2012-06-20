@@ -250,7 +250,7 @@ html, body {
     margin-top: 10px;
   }
 }
-@media screen and (orientation: landscape) and (min-width: 320px) and (max-width: 480px) {
+@media screen and (orientation: landscape) and (min-width: 320px) and (max-width: 550px) {
   body::before {
     content: "landscape 320-480";
     font-weight: bold;
