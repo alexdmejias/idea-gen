@@ -66,7 +66,9 @@ $(document).ready(function(){
 		});
 
 		$('#modal_share h3.close,#modal_about .close').on('click',function(){
-			$('#cont .modal').transition({opacity:'0'}).hide();
+			$('#cont .modal').transition({opacity:'0'},function(){
+				$(this).hide();
+			});
 		});
 
 });
