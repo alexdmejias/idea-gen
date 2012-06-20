@@ -312,6 +312,17 @@ html, body {
     margin: 0 auto;
     font-size: 150%;
   }
+  #shell .modal .modal_content {
+    width: 85%;
+    padding: 10px 0;
+  }
+  #shell .modal .modal_content .modal_title {
+    font-size: 1.25em;
+  }
+  #shell .modal .modal_content .modal_body a {
+    margin: 8px 3.5% 8px;
+    font-size: 14px;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   body::before {
