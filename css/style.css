@@ -129,9 +129,9 @@ html, body {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
-  color: #777777;
+  color: #777;
   padding: 6px 24px;
-  text-shadow: 1px 1px 0px #ffffff;
+  text-shadow: 1px 1px 0px #fff;
   width: 80%;
   margin: 0 auto;
   font-size: 120%;
@@ -233,7 +233,7 @@ html, body {
     font-size: 120%;
   }
   #shell .modal {
-    top: 4.5%;
+    top: 7.5%;
   }
   #shell .modal .modal_content {
     padding: 10px 0;
