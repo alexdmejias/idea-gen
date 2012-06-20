@@ -194,6 +194,7 @@ html, body {
     left: 0;
     right: 0;
     z-index: 99;
+    display: none;
   }
   #shell header nav #title {
     text-align: center;
@@ -261,6 +262,7 @@ html, body {
     left: 0;
     right: 0;
     z-index: 99;
+    display: none;
   }
   #cont #center {
     margin-top: 0;
@@ -286,6 +288,7 @@ html, body {
     left: 0;
     right: 0;
     z-index: 99;
+    display: none;
   }
   #shell header nav #title {
     margin-right: 2em;
@@ -322,6 +325,7 @@ html, body {
     left: 0;
     right: 0;
     z-index: 99;
+    display: none;
   }
   #shell #center {
     width: 95%;
@@ -355,6 +359,7 @@ html, body {
     left: 0;
     right: 0;
     z-index: 99;
+    display: none;
   }
   #shell #center {
     width: 95%;
