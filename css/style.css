@@ -194,7 +194,6 @@ html, body {
     left: 0;
     right: 0;
     z-index: 99;
-    display: none;
   }
   #shell header nav #title {
     text-align: center;
@@ -262,7 +261,6 @@ html, body {
     left: 0;
     right: 0;
     z-index: 99;
-    display: none;
   }
   #cont #center {
     margin-top: 0;
@@ -288,7 +286,9 @@ html, body {
     left: 0;
     right: 0;
     z-index: 99;
-    display: none;
+  }
+  #shell header nav #title {
+    margin-right: 2em;
   }
   #shell #center {
     width: 95%;
@@ -296,8 +296,8 @@ html, body {
     text-align: center;
   }
   #shell #center #words p {
-    padding: 0 25px;
-    font-size: 500%;
+    padding: 0 15px;
+    font-size: 250%;
   }
   #shell #butt_cont {
     width: 100%;
@@ -322,7 +322,6 @@ html, body {
     left: 0;
     right: 0;
     z-index: 99;
-    display: none;
   }
   #shell #center {
     width: 95%;
@@ -356,7 +355,6 @@ html, body {
     left: 0;
     right: 0;
     z-index: 99;
-    display: none;
   }
   #shell #center {
     width: 95%;
