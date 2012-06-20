@@ -194,6 +194,7 @@ html, body {
     left: 0;
     right: 0;
     z-index: 99;
+    display: none;
   }
   #shell header nav #title {
     padding: 10px 0 0 0;
@@ -233,7 +234,7 @@ html, body {
     font-size: 120%;
   }
   #shell .modal {
-    top: 7.5%;
+    top: 45px;
   }
   #shell .modal .modal_content {
     padding: 10px 0;
@@ -262,6 +263,7 @@ html, body {
     left: 0;
     right: 0;
     z-index: 99;
+    display: none;
   }
   #cont #center {
     margin-top: 0;
@@ -287,6 +289,7 @@ html, body {
     left: 0;
     right: 0;
     z-index: 99;
+    display: none;
   }
   #shell #center {
     width: 95%;
@@ -320,6 +323,7 @@ html, body {
     left: 0;
     right: 0;
     z-index: 99;
+    display: none;
   }
   #shell #center {
     width: 95%;
@@ -353,6 +357,7 @@ html, body {
     left: 0;
     right: 0;
     z-index: 99;
+    display: none;
   }
   #shell #center {
     width: 95%;
