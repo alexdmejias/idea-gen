@@ -18,70 +18,6 @@ a{
 ///////////////////////////////////////////////////////////////////////////////
 //testing
 ///////////////////////////////////////////////////////////////////////////////
-.modal{
-	display: none;//needed
-	color:#fff;
-	width:100%;
-	background-color:rgba(0,0,0,0.9);
-	position:absolute;
-	top:10.1%;
-	left:0px;
-	opacity: 0;
-	-moz-opacity: 0;
-	filter:alpha(opacity=0);
-	.modal_content{
-		width:50%;
-		margin:0 auto;
-		height:100%;
-		padding:30px 0;
-		.modal_title{
-			font-family: ColaborateBoldRegular, sans-serif;
-			font-size:1.5em;
-			height:24px;
-			h3{
-				float:left;
-				&.close{
-					float:right;
-					a{
-						// text-decoration:none;
-						color: #fff;
-						float:right;
-						font-family: ColaborateThinRegular, sans-serif;
-					}
-				}
-			}
-		}
-		.modal_body{
-			text-align: center;
-			a{
-				margin:25px 5% 0;
-			}
-		}
-	}
-}
-///////////////////////////////////////////////////////////////////////////////
-//MIXINS
-////indicator
-.indicator(@msg:"indicator",@r:0,@g:0,@b:0){
-	content: @msg; 
-	font-weight: bold;
-	display: block;
-	text-align: center;
-	background: rgba(@r,@g,@b, 0);
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    z-index: 99;
-    display: none;
-}
-///////////////////////////////////////////////////////////////////////////////
-
-
-html,body{
-	height:100%;/*allows for 100% height*/
-	font-family:ColaborateRegular;
-}
 #size{
 	background:red;
 	padding:3px;
@@ -89,6 +25,30 @@ html,body{
 	position: absolute;
 	bottom:0;
 	right:0;
+}
+////indicator bar
+.indicator(@msg:"indicator",@r:0,@g:0,@b:0){
+	content: @msg; 
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	background: rgba(@r,@g,@b, 1);
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 99;
+    // display: none;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//MIXINS
+///////////////////////////////////////////////////////////////////////////////
+
+
+html,body{
+	height:100%;/*allows for 100% height*/
+	font-family:ColaborateRegular;
 }
 #shell{
 	overflow: hidden;
@@ -102,13 +62,11 @@ html,body{
 	background: radial-gradient(center, ellipse cover,  #a7cfdf 0%,#23538a 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', endColorstr='#23538a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	min-height:100%;
-header{
-		// font-family:ColaborateRegular,sans-serif;
+	header{
 		height:auto;
 		width:100%;
 		background-color:rgba(0,0,0,0.9);
 		padding: 8px 0;
-
 		nav{
 			font-size:1.5em;
 			color:#fff;
@@ -127,12 +85,10 @@ header{
 				width:100%;
 				text-align: right;
 				li{
-					
 					padding:0 10px;
 					display: inline;
 					a{
 						color:#fff;
-						// text-decoration:none;
 						&:hover{
 							color:#fff;
 						}
@@ -169,8 +125,6 @@ header{
 	} //end #center
 	#butt_cont{
 		text-align: center;
-
-		///////////////////
 		width:100%;
 		position: fixed;
 		bottom:6%;
@@ -204,6 +158,47 @@ header{
 			background-color:#dfdfdf;
 		}
 	}//#butt_cont
+	.modal{
+		display: none;//needed
+		color:#fff;
+		width:100%;
+		background-color:rgba(0,0,0,0.9);
+		position:absolute;
+		top:16.25%;
+		left:0px;
+		opacity: 0;
+		-moz-opacity: 0;
+		filter:alpha(opacity=0);
+		.modal_content{
+			width:50%;
+			margin:0 auto;
+			height:100%;
+			padding:30px 0;
+			.modal_title{
+				font-family: ColaborateBoldRegular, sans-serif;
+				font-size:1.5em;
+				height:24px;
+				h3{
+					float:left;
+					&.close{
+						float:right;
+						a{
+							// text-decoration:none;
+							color: #fff;
+							float:right;
+							font-family: ColaborateThinRegular, sans-serif;
+						}
+					}
+				}
+			}
+			.modal_body{
+				text-align: center;
+				a{
+					margin:25px 5% 0;
+				}
+			}
+		}
+	}//end .modal
 }// end #shell
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -252,6 +247,23 @@ body::before{
 			width:80%;
 			margin:0 auto;
 			font-size:120%;
+		}
+	}//end #button_cont
+	.modal{
+		top:4.5%;
+		.modal_content{
+			padding:10px 0;
+			width:76%;
+			.modal_title{
+				font-size:1.2em;
+			}
+			.modal_body{
+				margin-top:0px;
+				a{
+					font-size:13px;
+					margin-top:10px;
+				}
+			}
 		}
 	}
 }//end #shell
@@ -397,6 +409,11 @@ body::before{
 			width:80%;
 			margin:0 auto;
 			font-size:300%;
+		}
+	}
+	.modal{
+		.modal_content{
+			width:510px;
 		}
 	}
 }//end #shell

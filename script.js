@@ -1,6 +1,6 @@
 $(document).ready(function(){
-		var button = document.getElementById('generate');
-		var par = document.getElementById('par');
+		// var button = document.getElementById('generate');
+		// var par = document.getElementById('par');
 		var Gen = {
 			data:[
 				['big','colossal','fat','gigantic','great','huge','immense','large','little','mammoth','massive','miniature','petite','puny','scrawny','short','small','tall','teeny','teeny-tiny','tiny'],
@@ -52,16 +52,6 @@ $(document).ready(function(){
 		$(window).on('load',function(){
 			var butt_text = ["Change the World",'Make a million','Be famous','Start a Business','Make a startup','Do something','New weekend project'];
 			$('#button').attr('value',butt_text[Math.floor(Math.random()*butt_text.length)]);
-			// $('#myModal').modal('hide');
-		});
-
-		$('#share,.close').on('click',function(){
-			if($('.share').css('opacity')==0){
-				$('#modal_share').transition({ opacity: '1' });
-			 	console.log('show');
-			}else{
-				$('#modal_share').transition({ opacity: '0' });
-			}
 		});
 
 		$('a.modal_link').on('click',function(){
@@ -74,6 +64,7 @@ $(document).ready(function(){
 				obj.show().transition({opacity:'0'});
 			}
 		});
+
 		$('#modal_share h3.close,#modal_about .close').on('click',function(){
 			$('#cont .modal').transition({opacity:'0'}).hide();
 		});

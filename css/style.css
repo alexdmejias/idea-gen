@@ -10,52 +10,6 @@
 a {
   text-decoration: none;
 }
-.modal {
-  display: none;
-  color: #fff;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  position: absolute;
-  top: 10.1%;
-  left: 0px;
-  opacity: 0;
-  -moz-opacity: 0;
-  filter: alpha(opacity=0);
-}
-.modal .modal_content {
-  width: 50%;
-  margin: 0 auto;
-  height: 100%;
-  padding: 30px 0;
-}
-.modal .modal_content .modal_title {
-  font-family: ColaborateBoldRegular, sans-serif;
-  font-size: 1.5em;
-  height: 24px;
-}
-.modal .modal_content .modal_title h3 {
-  float: left;
-}
-.modal .modal_content .modal_title h3.close {
-  float: right;
-}
-.modal .modal_content .modal_title h3.close a {
-  color: #fff;
-  float: right;
-  font-family: ColaborateThinRegular, sans-serif;
-}
-.modal .modal_content .modal_body {
-  text-align: center;
-}
-.modal .modal_content .modal_body a {
-  margin: 25px 5% 0;
-}
-html, body {
-  height: 100%;
-  /*allows for 100% height*/
-
-  font-family: ColaborateRegular;
-}
 #size {
   background: red;
   padding: 3px;
@@ -63,6 +17,12 @@ html, body {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+html, body {
+  height: 100%;
+  /*allows for 100% height*/
+
+  font-family: ColaborateRegular;
 }
 #shell {
   overflow: hidden;
@@ -182,19 +142,58 @@ html, body {
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
   background-color: #dfdfdf;
 }
+#shell .modal {
+  display: none;
+  color: #fff;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 16.25%;
+  left: 0px;
+  opacity: 0;
+  -moz-opacity: 0;
+  filter: alpha(opacity=0);
+}
+#shell .modal .modal_content {
+  width: 50%;
+  margin: 0 auto;
+  height: 100%;
+  padding: 30px 0;
+}
+#shell .modal .modal_content .modal_title {
+  font-family: ColaborateBoldRegular, sans-serif;
+  font-size: 1.5em;
+  height: 24px;
+}
+#shell .modal .modal_content .modal_title h3 {
+  float: left;
+}
+#shell .modal .modal_content .modal_title h3.close {
+  float: right;
+}
+#shell .modal .modal_content .modal_title h3.close a {
+  color: #fff;
+  float: right;
+  font-family: ColaborateThinRegular, sans-serif;
+}
+#shell .modal .modal_content .modal_body {
+  text-align: center;
+}
+#shell .modal .modal_content .modal_body a {
+  margin: 25px 5% 0;
+}
 @media screen and (max-width: 480px) {
   body::before {
     content: "max-width:480";
     font-weight: bold;
     display: block;
     text-align: center;
-    background: rgba(255, 255, 255, 0);
+    background: #ffffff;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 99;
-    display: none;
   }
   #shell header nav #title {
     padding: 10px 0 0 0;
@@ -233,6 +232,23 @@ html, body {
     margin: 0 auto;
     font-size: 120%;
   }
+  #shell .modal {
+    top: 4.5%;
+  }
+  #shell .modal .modal_content {
+    padding: 10px 0;
+    width: 76%;
+  }
+  #shell .modal .modal_content .modal_title {
+    font-size: 1.2em;
+  }
+  #shell .modal .modal_content .modal_body {
+    margin-top: 0px;
+  }
+  #shell .modal .modal_content .modal_body a {
+    font-size: 13px;
+    margin-top: 10px;
+  }
 }
 @media screen and (orientation: landscape) and (min-width: 320px) and (max-width: 480px) {
   body::before {
@@ -240,13 +256,12 @@ html, body {
     font-weight: bold;
     display: block;
     text-align: center;
-    background: rgba(255, 0, 0, 0);
+    background: #ff0000;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 99;
-    display: none;
   }
   #cont #center {
     margin-top: 0;
@@ -266,13 +281,12 @@ html, body {
     font-weight: bold;
     display: block;
     text-align: center;
-    background: rgba(0, 255, 0, 0);
+    background: #00ff00;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 99;
-    display: none;
   }
   #shell #center {
     width: 95%;
@@ -300,13 +314,12 @@ html, body {
     font-weight: bold;
     display: block;
     text-align: center;
-    background: rgba(0, 0, 255, 0);
+    background: #0000ff;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 99;
-    display: none;
   }
   #shell #center {
     width: 95%;
@@ -334,13 +347,12 @@ html, body {
     font-weight: bold;
     display: block;
     text-align: center;
-    background: rgba(255, 0, 255, 0);
+    background: #ff00ff;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 99;
-    display: none;
   }
   #shell #center {
     width: 95%;
@@ -360,5 +372,8 @@ html, body {
     width: 80%;
     margin: 0 auto;
     font-size: 300%;
+  }
+  #shell .modal .modal_content {
+    width: 510px;
   }
 }
