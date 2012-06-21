@@ -48,7 +48,6 @@ $(document).ready(function(){
 				$('#words p').eq(i).text(idea[i]);
 				//console.log('new '+idea[i]);
 			}
-			if()
 			$('#words p').fadeIn('slow');
 		}
 
