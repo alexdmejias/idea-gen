@@ -109,7 +109,7 @@ html, body {
   text-shadow: 1px 1px 6px #222;
   filter: dropshadow(color=#de39de, offx=1, offy=1);
 }
-#shell #center #words p #idea0 {
+#shell #center #words p #0 {
   padding-left: 0;
 }
 #shell #butt_cont {
