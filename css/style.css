@@ -112,6 +112,9 @@ html, body {
 #shell #center #words p #0 {
   padding-left: 0;
 }
+#shell #center #words p:hover {
+  color: #000;
+}
 #shell #butt_cont {
   text-align: center;
   width: 100%;
