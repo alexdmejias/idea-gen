@@ -12,7 +12,7 @@ $(document).ready(function(){
 			for (var i=0;Gen.data.length>i;i++){
 				Gen.locked[i]=false;
 			}
-			Gen.button_text();
+			Gen.button();
 			Gen.show();
 		},
 		//generates random numbers
@@ -49,7 +49,8 @@ $(document).ready(function(){
 			words.transition({opacity:'1'});
 		},
 
-		button_text:function(){
+		//changes the the text in the button
+		button:function(){
 			// var butt_text = ["Change the World",'Make a million','Be famous','Start a Business','Make a startup','Do something','New weekend project'];
 			// $('#button').attr('value',Gen.butt_text[Math.floor(Math.random()*butt_text.length)]);
 			$('#button').attr('value',Gen.random(Gen.button_text.length));
