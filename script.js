@@ -29,14 +29,14 @@ $(document).ready(function(){
 		//takes care of the showing of the words
 		show:function(){
 			var idea= Gen.get_item(),
-				words = $('#words p');
+				words = $('#words');
 
-			words.fadeOut(0);
-			// $('#words p').fadeOut(0);
-			for(var i=0,l=idea.length;l>i;i++){
-				words.eq(i).text(idea[i]);
-			}
-			words.fadeIn('slow');
+			words.transition({opacity:'0'},function(){
+				for(var i=0,l=idea.length;l>i;i++){
+					$('#'+i).text(idea[i]);
+				}
+			});
+			words.transition({opacity:'1'});
 		}
 	};
 
