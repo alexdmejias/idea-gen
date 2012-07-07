@@ -1,7 +1,7 @@
 //simpless:!minify
-@import 'reset.css';
-@import 'font.css';
-@import 'zocial.css';
+@import 'reset';
+@import 'font';
+@import 'zocial';
 
 ///////////////////////////////////////////////////////////////////////////////
 //defaults & others
@@ -28,15 +28,15 @@ a{
 }
 ////indicator bar
 .indicator(@msg:"indicator",@r:0,@g:0,@b:0){
-	content: @msg; 
+	content: @msg;
 	font-weight: bold;
 	display: block;
 	text-align: center;
 	background: rgba(@r,@g,@b, 1);
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    right: 0; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 99;
     display: none;
 }
@@ -204,6 +204,7 @@ html,body{
 				font-family:ColaborateThinRegular,sans-serif;
 				text-align: left;
 				a{
+					color:#fff;
 					margin:0;
 					font-family: ColaborateBoldRegular, sans-serif;
 						&:visited{
