@@ -19,7 +19,6 @@ c||"rotateY"===c||"perspective"===c||"transformOrigin"===c)))"_"!==c[0]&&(a&&"sc
 k[this]||null});typeof f==="function"&&f.apply(h);typeof b==="function"&&b()};if(l>0&&o&&d.transit.useTransitionEnd){c=true;h.bind(o,g)}else window.setTimeout(g,l);h.each(function(){l>0&&(this.style[e.transition]=j);d(this).css(a)})};p(h,i,function(a){var b=0;e.transition==="MozTransition"&&b<25&&(b=25);window.setTimeout(function(){m(a)},b)});return this};d.transit.getTransitionValue=q})(jQuery);
 
 
-$(document).ready(function(){
 	var Gen = {
 		button_text : ["Change the World",'Make a million','Be famous','Start a Business','Make a startup','Do something','New weekend project'],
 		locked:[],
@@ -30,10 +29,8 @@ $(document).ready(function(){
 		],
 
 		init:function(){
-			for (var i=0;Gen.data.length>i;i++){
-				Gen.locked[i]=false;
-			}
-			Gen.button();
+			Gen.set_unlock();
+			// Gen.button();
 			Gen.show();
 		},
 		//generates random numbers
@@ -46,10 +43,9 @@ $(document).ready(function(){
 		get_item:function(){
 	  		var selected=[];
 	  		for(var a=0;a<Gen.data.length;a++){
-				if(locked[a]==false){
+				if(Gen.locked[a]==false){
 	    			selected[a]=Gen.data[a][Gen.random(Gen.data[a].length)];
 				} else {
-					console.log('cont');
 					continue;
 					return selected;
 				}
@@ -71,37 +67,43 @@ $(document).ready(function(){
 		},
 
 		//changes the the text in the button
-		button:function(){
-			// var butt_text = ["Change the World",'Make a million','Be famous','Start a Business','Make a startup','Do something','New weekend project'];
-			// $('#button').attr('value',Gen.butt_text[Math.floor(Math.random()*butt_text.length)]);
-			$('#button').attr('value',Gen.button_text[Gen.random(Gen.button_text.length)]);
-		}
+		// button:function(){
+		// 	var butt_text = ["Change the World",'Make a million','Be famous','Start a Business','Make a startup','Do something','New weekend project'];
+		// 	$('#button').attr('value',Gen.butt_text[Math.floor(Math.random()*butt_text.length)]);
+		// 	$('#button').attr('value',Gen.button_text[Gen.random(Gen.button_text.length)]);
+		// },
+		set_unlock:function(){
+			//make a function so all the words are locked from the getgo(?),
+			//no matter how many types there are
+			for (var i=0;Gen.data.length>i;i++){
+				Gen.locked[i]=false;
+			}
+		}//end set_unlock()
 	};
+$(document).ready(function(){
+
+	$(window).on('load',function(){
+		// var butt_text = ["Change the World",'Make a million','Be famous','Start a Business','Make a startup','Do something','New weekend project'];
+		// $('#button').attr('value',butt_text[Math.floor(Math.random()*butt_text.length)]);
+		// Gen.show();
+		Gen.init();
+	});
 
 	//generates the words
 	$("input").on('click',function(){
 		Gen.show();
 	});
 
-	//make a function so all the words are locked from the getgo(?),
-	//no matter how many types there are
-	// var locked=[false,false,false];
-	var locked=[];
-	for (var i=0;Gen.data.length>i;i++){
-		locked[i]=false;
-	}
-
 	//changes the color of the words if they are clicked on
 	$('p').on('click',function(){
 		var id= $(this).attr('id');
-		if(locked[id]==false){
-			locked[id]=true;
+		if(Gen.locked[id]==false){
+			Gen.locked[id]=true;
 			$(this).css('color','black');
 		} else {
-			locked[id]=false;
+			Gen.locked[id]=false;
 			$(this).css('color','white');
 		}
-		// console.log('locked ' + locked);
 	});
 
 	//shows the measurements of the window
@@ -112,12 +114,6 @@ $(document).ready(function(){
 	// });
 
 	//changes the words of the button on every refresh
-	$(window).on('load',function(){
-		// var butt_text = ["Change the World",'Make a million','Be famous','Start a Business','Make a startup','Do something','New weekend project'];
-		// $('#button').attr('value',butt_text[Math.floor(Math.random()*butt_text.length)]);
-		// Gen.show();
-		Gen.init();
-	});
 
 	//shows the modal
 	$('a.modal_link').on('click',function(){
