@@ -103,10 +103,12 @@ section {
 body {
   line-height: 1;
 }
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 blockquote:before,
@@ -157,7 +159,8 @@ Enjoy
   src: url('font/zocial-regular-webfont.eot?#iefix') format('embedded-opentype'), url('font/zocial-regular-webfont.woff') format('woff'), url('font/zocial-regular-webfont.ttf') format('truetype'), url('font/zocial-regular-webfont.svg#ZocialRegular') format('svg');
 }
 /* Button structure */
-.zocial, a.zocial {
+.zocial,
+a.zocial {
   border: 1px solid #777;
   border-color: rgba(0, 0, 0, 0.2);
   border-bottom-color: #333;
@@ -229,7 +232,8 @@ Enjoy
   background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05) 49%, rgba(0, 0, 0, 0.05) 51%, rgba(0, 0, 0, 0.1));
   background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05) 49%, rgba(0, 0, 0, 0.05) 51%, rgba(0, 0, 0, 0.1));
 }
-.zocial:hover, .zocial:focus {
+.zocial:hover,
+.zocial:focus {
   background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.15) 49%, rgba(0, 0, 0, 0.1) 51%, rgba(0, 0, 0, 0.15));
   background-image: -ms-linear-gradient(rgba(255, 255, 255, 0.15) 49%, rgba(0, 0, 0, 0.1) 51%, rgba(0, 0, 0, 0.15));
   background-image: -o-linear-gradient(rgba(255, 255, 255, 0.15) 49%, rgba(0, 0, 0, 0.1) 51%, rgba(0, 0, 0, 0.15));
@@ -246,7 +250,9 @@ Enjoy
   background-image: linear-gradient(bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 30%, transparent 50%, rgba(0, 0, 0, 0.1));
 }
 /* Adjustments for light background buttons */
-.zocial.github, .zocial.reddit, .zocial.secondary {
+.zocial.github,
+.zocial.reddit,
+.zocial.secondary {
   border: 1px solid #aaa;
   border-color: rgba(0, 0, 0, 0.3);
   border-bottom-color: #777;
@@ -272,7 +278,9 @@ Enjoy
   background-image: linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2) 49%, rgba(0, 0, 0, 0.05) 51%, rgba(0, 0, 0, 0.15));
 }
 /* :active adjustments for light background buttons */
-.zocial.github:active, .zocial.reddit:active, .zocial.secondary:active {
+.zocial.github:active,
+.zocial.reddit:active,
+.zocial.secondary:active {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(30%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.1)));
   background-image: -moz-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.1));
   background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.1));
@@ -315,11 +323,13 @@ The Miscellaneous Buttons
 These button have no icons and can be general purpose buttons while ensuring consistent button style
 Credit to @guillermovs for suggesting
 */
-.zocial.primary, .zocial.secondary {
+.zocial.primary,
+.zocial.secondary {
   margin: 0.1em 0;
   padding: 0 1em;
 }
-.zocial.primary:before, .zocial.secondary:before {
+.zocial.primary:before,
+.zocial.secondary:before {
   display: none;
 }
 .zocial.primary {
@@ -350,7 +360,8 @@ a {
   bottom: 0;
   right: 0;
 }
-html, body {
+html,
+body {
   height: 100%;
   /*allows for 100% height*/
 
@@ -405,7 +416,8 @@ html, body {
   font-family: ColaborateThinRegular, sans-serif;
   font-size: 14px;
 }
-#shell header nav #title .sub a, #shell header nav #title .sub a:visited {
+#shell header nav #title .sub a,
+#shell header nav #title .sub a:visited {
   color: #fff;
 }
 #shell header nav ul {
@@ -449,6 +461,11 @@ html, body {
 }
 #shell #center #words p:hover {
   color: #000;
+}
+#shell #center #words p #0::before,
+#shell #center #words p #2::after {
+  content: '"';
+  font-size: 1000%;
 }
 #shell #butt_cont {
   text-align: center;
