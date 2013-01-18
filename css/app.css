@@ -1,0 +1,728 @@
+/* line 13, ../sass/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 23, ../sass/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 26, ../sass/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 29, ../sass/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 32, ../sass/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 36, ../sass/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 40, ../sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: 'ColaborateThinRegular';
+  src: url("font/ColabThi-webfont.eot");
+  src: url("font/ColabThi-webfont.eot?#iefix") format("embedded-opentype"), url("font/ColabThi-webfont.woff") format("woff"), url("font/ColabThi-webfont.ttf") format("truetype"), url("font/ColabThi-webfont.svg#ColaborateThinRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ColaborateRegular';
+  src: url("font/ColabReg-webfont.eot");
+  src: url("font/ColabReg-webfont.eot?#iefix") format("embedded-opentype"), url("font/ColabReg-webfont.woff") format("woff"), url("font/ColabReg-webfont.ttf") format("truetype"), url("font/ColabReg-webfont.svg#ColaborateRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ColaborateBoldRegular';
+  src: url("font/ColabBol-webfont.eot");
+  src: url("font/ColabBol-webfont.eot?#iefix") format("embedded-opentype"), url("font/ColabBol-webfont.woff") format("woff"), url("font/ColabBol-webfont.ttf") format("truetype"), url("font/ColabBol-webfont.svg#ColaborateBoldRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+Code written by Sam Collins (@smcllns) of www.eventasaur.us
+You are free to use this work commercially
+You are free to extend this work without permissions from the author (just do so tastefully eh?)
+Enjoy
+*/
+/* Reference icons from font-files */
+@font-face {
+  font-family: 'zocial';
+  font-style: normal;
+  font-weight: normal;
+  src: url("font/zocial-regular-webfont.eot");
+  src: url("font/zocial-regular-webfont.eot?#iefix") format("embedded-opentype"), url("font/zocial-regular-webfont.woff") format("woff"), url("font/zocial-regular-webfont.ttf") format("truetype"), url("font/zocial-regular-webfont.svg#ZocialRegular") format("svg");
+}
+
+/* Button structure */
+/* line 27, ../sass/_zocial.scss */
+.zocial,
+a.zocial {
+  border: 1px solid #777777;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-bottom-color: #333;
+  border-bottom-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  -moz-box-shadow: inset 0 0.08em 0 rgba(255, 255, 255, 0.4), inset 0 0 0.1em rgba(255, 255, 255, 0.9);
+  -webkit-box-shadow: inset 0 0.08em 0 rgba(255, 255, 255, 0.4), inset 0 0 0.1em rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 0.08em 0 rgba(255, 255, 255, 0.4), inset 0 0 0.1em rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  display: inline-block;
+  font: bold 100%/2.1 "Lucida Grande", Tahoma, sans-serif;
+  padding: 0 0.95em 0 0;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  position: relative;
+  -moz-border-radius: .3em;
+  -webkit-border-radius: .3em;
+  border-radius: .3em;
+}
+
+/* line 56, ../sass/_zocial.scss */
+.zocial:before {
+  content: "";
+  border-right: 0.075em solid rgba(0, 0, 0, 0.1);
+  float: left;
+  font: 120%/1.65 zocial;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0 0.5em 0 0;
+  padding: 0 0.5em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  -moz-box-shadow: 0.075em 0 0 rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: 0.075em 0 0 rgba(255, 255, 255, 0.25);
+  box-shadow: 0.075em 0 0 rgba(255, 255, 255, 0.25);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 76, ../sass/_zocial.scss */
+.zocial:active {
+  outline: none;
+  /* outline is visible on :focus */
+}
+
+/* Buttons can be displayed as standalone icons by adding a class of "icon" */
+/* line 82, ../sass/_zocial.scss */
+.zocial.icon {
+  overflow: hidden;
+  max-width: 2.4em;
+  padding-left: 0;
+  padding-right: 0;
+  max-height: 2.15em;
+  white-space: nowrap;
+}
+
+/* line 90, ../sass/_zocial.scss */
+.zocial.icon:before {
+  padding: 0;
+  width: 2em;
+  height: 2em;
+  box-shadow: none;
+  border: none;
+}
+
+/* Gradients */
+/* line 101, ../sass/_zocial.scss */
+.zocial {
+  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05) 49%, rgba(0, 0, 0, 0.05) 51%, rgba(0, 0, 0, 0.1));
+  background-image: -ms-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05) 49%, rgba(0, 0, 0, 0.05) 51%, rgba(0, 0, 0, 0.1));
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05) 49%, rgba(0, 0, 0, 0.05) 51%, rgba(0, 0, 0, 0.1));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), color-stop(49%, rgba(255, 255, 255, 0.05)), color-stop(51%, rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.1)));
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05) 49%, rgba(0, 0, 0, 0.05) 51%, rgba(0, 0, 0, 0.1));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05) 49%, rgba(0, 0, 0, 0.05) 51%, rgba(0, 0, 0, 0.1));
+}
+
+/* line 110, ../sass/_zocial.scss */
+.zocial:hover, .zocial:focus {
+  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.15) 49%, rgba(0, 0, 0, 0.1) 51%, rgba(0, 0, 0, 0.15));
+  background-image: -ms-linear-gradient(rgba(255, 255, 255, 0.15) 49%, rgba(0, 0, 0, 0.1) 51%, rgba(0, 0, 0, 0.15));
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.15) 49%, rgba(0, 0, 0, 0.1) 51%, rgba(0, 0, 0, 0.15));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), color-stop(49%, rgba(255, 255, 255, 0.15)), color-stop(51%, rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.15)));
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.15) 49%, rgba(0, 0, 0, 0.1) 51%, rgba(0, 0, 0, 0.15));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.15) 49%, rgba(0, 0, 0, 0.1) 51%, rgba(0, 0, 0, 0.15));
+}
+
+/* line 119, ../sass/_zocial.scss */
+.zocial:active {
+  background-image: -moz-linear-gradient(bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 30%, transparent 50%, rgba(0, 0, 0, 0.1));
+  background-image: -ms-linear-gradient(bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 30%, transparent 50%, rgba(0, 0, 0, 0.1));
+  background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 30%, transparent 50%, rgba(0, 0, 0, 0.1));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), color-stop(30%, rgba(255, 255, 255, 0)), color-stop(50%, transparent), to(rgba(0, 0, 0, 0.1)));
+  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 30%, transparent 50%, rgba(0, 0, 0, 0.1));
+  background-image: linear-gradient(bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 30%, transparent 50%, rgba(0, 0, 0, 0.1));
+}
+
+/* Adjustments for light background buttons */
+/* line 132, ../sass/_zocial.scss */
+.zocial.github,
+.zocial.reddit,
+.zocial.secondary {
+  border: 1px solid #aaaaaa;
+  border-color: rgba(0, 0, 0, 0.3);
+  border-bottom-color: #777;
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 0.08em 0 rgba(255, 255, 255, 0.7), inset 0 0 0.08em rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: inset 0 0.08em 0 rgba(255, 255, 255, 0.7), inset 0 0 0.08em rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 0.08em 0 rgba(255, 255, 255, 0.7), inset 0 0 0.08em rgba(255, 255, 255, 0.5);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* :hover adjustments for light background buttons */
+/* line 151, ../sass/_zocial.scss */
+.zocial.github:focus,
+.zocial.github:hover,
+.zocial.reddit:focus,
+.zocial.reddit:hover,
+.zocial.secondary:focus,
+.zocial.secondary:hover,
+.zocial.twitter:focus {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), color-stop(49%, rgba(255, 255, 255, 0.2)), color-stop(51%, rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.15)));
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2) 49%, rgba(0, 0, 0, 0.05) 51%, rgba(0, 0, 0, 0.15));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2) 49%, rgba(0, 0, 0, 0.05) 51%, rgba(0, 0, 0, 0.15));
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2) 49%, rgba(0, 0, 0, 0.05) 51%, rgba(0, 0, 0, 0.15));
+  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2) 49%, rgba(0, 0, 0, 0.05) 51%, rgba(0, 0, 0, 0.15));
+  background-image: linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2) 49%, rgba(0, 0, 0, 0.05) 51%, rgba(0, 0, 0, 0.15));
+}
+
+/* :active adjustments for light background buttons */
+/* line 164, ../sass/_zocial.scss */
+.zocial.github:active,
+.zocial.reddit:active,
+.zocial.secondary:active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(30%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.1)));
+  background-image: -moz-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.1));
+  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.1));
+  background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.1));
+  background-image: -ms-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.1));
+  background-image: linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.1));
+}
+
+/* Button icon and color */
+/* Icon characters are stored in unicode private area */
+/* line 175, ../sass/_zocial.scss */
+.zocial.facebook:before {
+  content: "\E045";
+}
+
+/* line 176, ../sass/_zocial.scss */
+.zocial.github:before {
+  content: "\E046";
+}
+
+/* line 177, ../sass/_zocial.scss */
+.zocial.reddit:before {
+  content: "\E01D";
+  color: red;
+}
+
+/* line 178, ../sass/_zocial.scss */
+.zocial.twitter:before {
+  content: "\E033";
+}
+
+/* Button background and text color */
+/* line 182, ../sass/_zocial.scss */
+.zocial.facebook {
+  background-color: #4863ae;
+}
+
+/* line 183, ../sass/_zocial.scss */
+.zocial.github {
+  background-color: #fbfbfb;
+  color: #050505;
+}
+
+/* line 184, ../sass/_zocial.scss */
+.zocial.reddit {
+  background-color: #fff;
+  color: #222;
+}
+
+/* line 185, ../sass/_zocial.scss */
+.zocial.twitter {
+  background-color: #46c0fb;
+}
+
+/*
+The Miscellaneous Buttons
+These button have no icons and can be general purpose buttons while ensuring consistent button style
+Credit to @guillermovs for suggesting
+*/
+/* line 193, ../sass/_zocial.scss */
+.zocial.primary, .zocial.secondary {
+  margin: 0.1em 0;
+  padding: 0 1em;
+}
+
+/* line 194, ../sass/_zocial.scss */
+.zocial.primary:before, .zocial.secondary:before {
+  display: none;
+}
+
+/* line 195, ../sass/_zocial.scss */
+.zocial.primary {
+  background-color: #333;
+}
+
+/* line 196, ../sass/_zocial.scss */
+.zocial.secondary {
+  background-color: #f0f0eb;
+  color: #222;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Any browser-specific adjustments */
+/* line 200, ../sass/_zocial.scss */
+button:-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 4, ../sass/_style.scss */
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: ColaborateRegular;
+}
+
+/* line 9, ../sass/_style.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 44, ../sass/_style.scss */
+html, body {
+  height: 100%;
+  /*allows for 100% height*/
+  font-family: ColaborateRegular;
+}
+
+/* line 48, ../sass/_style.scss */
+#shell {
+  overflow: hidden;
+  width: 100%;
+  background: #23538A;
+  /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #a7cfdf 0%, #23538a 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #a7cfdf), color-stop(100%, #23538a));
+  /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, #a7cfdf 0%, #23538a 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, #a7cfdf 0%, #23538a 100%);
+  /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, #a7cfdf 0%, #23538a 100%);
+  /* IE10+ */
+  background: radial-gradient(center, ellipse cover, #a7cfdf 0%, #23538a 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a7cfdf', endColorstr='#23538a',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  min-height: 100%;
+}
+/* line 60, ../sass/_style.scss */
+#shell header {
+  height: auto;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 8px 0;
+}
+/* line 65, ../sass/_style.scss */
+#shell header nav {
+  font-size: 1.5em;
+  color: #fff;
+}
+/* line 68, ../sass/_style.scss */
+#shell header nav #title {
+  float: left;
+  margin-right: 5em;
+  margin-left: 1em;
+  color: #fff;
+}
+/* line 74, ../sass/_style.scss */
+#shell header nav #title .sub {
+  font-family: ColaborateThinRegular,sans-serif;
+  font-size: 14px;
+}
+/* line 77, ../sass/_style.scss */
+#shell header nav #title .sub a, #shell header nav #title .sub a:visited {
+  color: #fff;
+}
+/* line 82, ../sass/_style.scss */
+#shell header nav ul {
+  width: 100%;
+  text-align: right;
+}
+/* line 85, ../sass/_style.scss */
+#shell header nav ul li {
+  padding: 0 10px;
+  display: inline;
+}
+/* line 88, ../sass/_style.scss */
+#shell header nav ul li a {
+  color: #fff;
+}
+/* line 90, ../sass/_style.scss */
+#shell header nav ul li a:hover {
+  color: #fff;
+}
+/* line 94, ../sass/_style.scss */
+#shell header nav ul li .zocial {
+  font-size: 10px;
+  padding: 0;
+}
+/* line 102, ../sass/_style.scss */
+#shell #center {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+  height: 200px;
+  text-align: center;
+}
+/* line 108, ../sass/_style.scss */
+#shell #center #words p {
+  display: inline;
+  cursor: pointer;
+  font-family: Courgette, Helvetica, Verdana, sans-serif;
+  padding: 0 3%;
+  font-weight: 400;
+  font-size: 5em;
+  color: #fff;
+  text-shadow: 1px 1px 6px #222222;
+  filter: dropshadow(color=#de39de, offx=1, offy=1);
+}
+/* line 118, ../sass/_style.scss */
+#shell #center #words p #0 {
+  padding-left: 0;
+}
+/* line 121, ../sass/_style.scss */
+#shell #center #words p:hover {
+  color: #000;
+}
+/* line 124, ../sass/_style.scss */
+#shell #center #words p #0::before, #shell #center #words p #2::after {
+  content: '"';
+  font-size: 1000%;
+}
+/* line 132, ../sass/_style.scss */
+#shell #butt_cont {
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 6%;
+}
+/* line 138, ../sass/_style.scss */
+#shell #butt_cont #button {
+  margin-top: 3em;
+  cursor: pointer;
+  font: normal normal 120% "ColaborateRegular", Helvetica, Verdana, sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
+  background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+  background-color: #ededed;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  color: #777;
+  padding: 6px 24px;
+  text-shadow: 1px 1px 0px white;
+  width: 80%;
+  margin: 0 auto;
+}
+/* line 156, ../sass/_style.scss */
+#shell #butt_cont #button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
+  background: -moz-linear-gradient(center top, #dfdfdf 5%, #ededed 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+  background-color: #dfdfdf;
+}
+/* line 163, ../sass/_style.scss */
+#shell .modal {
+  display: none;
+  color: #fff;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 16.25%;
+  left: 0px;
+  opacity: 0;
+  -moz-opacity: 0;
+  filter: alpha(opacity=0);
+}
+/* line 174, ../sass/_style.scss */
+#shell .modal .modal_content {
+  width: 50%;
+  margin: 0 auto;
+  height: 100%;
+  padding: 30px 0;
+}
+/* line 179, ../sass/_style.scss */
+#shell .modal .modal_content .modal_title {
+  font-size: 1.5em;
+  height: 24px;
+}
+/* line 183, ../sass/_style.scss */
+#shell .modal .modal_content .modal_title h3 {
+  float: left;
+}
+/* line 185, ../sass/_style.scss */
+#shell .modal .modal_content .modal_title h3.close {
+  float: right;
+}
+/* line 187, ../sass/_style.scss */
+#shell .modal .modal_content .modal_title h3.close a {
+  color: #fff;
+  float: right;
+  font-family: ColaborateThinRegular, sans-serif;
+}
+/* line 196, ../sass/_style.scss */
+#shell .modal .modal_content .modal_body {
+  text-align: center;
+}
+/* line 198, ../sass/_style.scss */
+#shell .modal .modal_content .modal_body a {
+  margin: 25px 5% 0;
+}
+/* line 206, ../sass/_style.scss */
+#shell #modal_about .modal_content .modal_body {
+  margin-top: 15px;
+  font-family: ColaborateThinRegular,sans-serif;
+  text-align: left;
+}
+/* line 210, ../sass/_style.scss */
+#shell #modal_about .modal_content .modal_body a {
+  color: #fff;
+  margin: 0;
+  font-family: ColaborateBoldRegular, sans-serif;
+}
+/* line 214, ../sass/_style.scss */
+#shell #modal_about .modal_content .modal_body a:visited {
+  color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+  /* line 232, ../sass/_style.scss */
+  #shell header nav #title {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+  }
+  /* line 237, ../sass/_style.scss */
+  #shell header nav ul {
+    text-align: center;
+  }
+  /* line 239, ../sass/_style.scss */
+  #shell header nav ul li {
+    font-size: 75%;
+    padding: 0.35em 0.75em;
+  }
+  /* line 246, ../sass/_style.scss */
+  #shell #center {
+    height: 200px;
+    width: 100%;
+    margin-top: 25px;
+  }
+  /* line 250, ../sass/_style.scss */
+  #shell #center #words {
+    text-align: center;
+    margin: 30px;
+  }
+  /* line 253, ../sass/_style.scss */
+  #shell #center #words p {
+    padding-left: 0;
+    padding: 0 3%;
+    font-size: 3.5em;
+  }
+  /* line 260, ../sass/_style.scss */
+  #shell #butt_cont {
+    width: 100%;
+    position: fixed;
+    bottom: 6%;
+  }
+  /* line 264, ../sass/_style.scss */
+  #shell #butt_cont #button {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 120%;
+  }
+  /* line 270, ../sass/_style.scss */
+  #shell .modal {
+    top: 70px;
+  }
+  /* line 272, ../sass/_style.scss */
+  #shell .modal .modal_content {
+    padding: 10px 0;
+    width: 76%;
+  }
+  /* line 275, ../sass/_style.scss */
+  #shell .modal .modal_content .modal_title {
+    font-size: 1.2em;
+  }
+  /* line 278, ../sass/_style.scss */
+  #shell .modal .modal_content .modal_body {
+    margin-top: 0px;
+  }
+  /* line 280, ../sass/_style.scss */
+  #shell .modal .modal_content .modal_body a {
+    font-size: 13px;
+    margin-top: 10px;
+  }
+}
+@media screen and (orientation: landscape) and (min-width: 320px) and (max-width: 550px) {
+  /* line 297, ../sass/_style.scss */
+  #cont #center {
+    margin-top: 0;
+    height: auto;
+  }
+  /* line 300, ../sass/_style.scss */
+  #cont #center #words {
+    margin: 0;
+    margin: 15px;
+  }
+  /* line 303, ../sass/_style.scss */
+  #cont #center #words p {
+    font-size: 2.5em;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  /* line 321, ../sass/_style.scss */
+  #shell header nav #title {
+    margin-right: 2em;
+  }
+  /* line 330, ../sass/_style.scss */
+  #shell #center {
+    width: 95%;
+    margin: 15px auto 0;
+    text-align: center;
+  }
+  /* line 335, ../sass/_style.scss */
+  #shell #center #words p {
+    padding: 0 15px;
+    font-size: 500%;
+  }
+  /* line 341, ../sass/_style.scss */
+  #shell #butt_cont {
+    width: 100%;
+    position: fixed;
+    bottom: 6%;
+  }
+  /* line 345, ../sass/_style.scss */
+  #shell #butt_cont #button {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 150%;
+  }
+  /* line 352, ../sass/_style.scss */
+  #shell .modal .modal_content {
+    width: 85%;
+    padding: 10px 0;
+  }
+  /* line 355, ../sass/_style.scss */
+  #shell .modal .modal_content .modal_title {
+    font-size: 1.25em;
+  }
+  /* line 359, ../sass/_style.scss */
+  #shell .modal .modal_content .modal_body a {
+    margin: 8px 3.5% 8px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* line 387, ../sass/_style.scss */
+  #shell #center {
+    width: 95%;
+    margin: 15px auto 0;
+    text-align: center;
+  }
+  /* line 392, ../sass/_style.scss */
+  #shell #center #words p {
+    padding: 0 25px;
+    font-size: 800%;
+  }
+  /* line 398, ../sass/_style.scss */
+  #shell #butt_cont {
+    width: 100%;
+    position: fixed;
+    bottom: 6%;
+  }
+  /* line 402, ../sass/_style.scss */
+  #shell #butt_cont #button {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 250%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  /* line 417, ../sass/_style.scss */
+  #shell #center {
+    width: 95%;
+    margin: 15px auto 0;
+    text-align: center;
+  }
+  /* line 422, ../sass/_style.scss */
+  #shell #center #words p {
+    padding: 0 25px;
+    font-size: 1000%;
+  }
+  /* line 428, ../sass/_style.scss */
+  #shell #butt_cont {
+    width: 100%;
+    position: fixed;
+    bottom: 6%;
+  }
+  /* line 432, ../sass/_style.scss */
+  #shell #butt_cont #button {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 300%;
+  }
+  /* line 439, ../sass/_style.scss */
+  #shell .modal .modal_content {
+    width: 510px;
+  }
+}
