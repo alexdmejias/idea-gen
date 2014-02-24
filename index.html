@@ -10,7 +10,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 </head>
 <body onload="window.top.scrollTo(0,1);">
-	<div id="shell">
+	<div class="wrap">
 		<header>
 			<nav>
 				<h1 id="title">idea generator<span class="sub"> by <a href="http://alex-mejias.com">Alex Mejias</a></span></h1>
@@ -38,7 +38,7 @@
 						<h3 class="close"><a href="#">close</a></h3>
 					</div>
 					<div class="modal_body">
-						<p>Idea Generator was born as both a necessity to have a side project, get more side projects and to get my feet wet with OOP JS. You can find more of my projects at <a href="http://alexismejias.com">my website</a> (work in progress) but mean while you can see some of them <a href="http://www.behance.net/aleximejias">here</a>.</p>
+						<p>Idea Generator was born as both a necessity to have a side project, get more side projects and to get my feet wet with OOP JS. You can find more of my projects at <a href="http://alexdmejias.com">my website</a>.</p>
 					</div>
 				</div>
 			</div><!-- end #modal_about -->
@@ -52,25 +52,25 @@
 					<div class="modal_body">
 						<a href="https://github.com/amejias101/idea-gen" class="zocial github" data-lang="en">github</a>
 						<a href="http://twitter.com/" class="zocial twitter" target="_blank">twitter</a>
-						<a href="#" class="zocial facebook">facebook</a>
-						<a href="http://www.reddit.com/r/web_design/comments/x6crh/idea_generator/" class="zocial reddit">reddit</a>
 					</div>
 				</div>
 			</div><!-- end #modal_share -->
 		</div><!-- end #cont -->
-	</div><!-- end #shell -->
+	</div><!-- end .wrap -->
 	<!-- <p id="size"></p> -->
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script src="js/mine/min/script.min.js"></script>
 	<script>
-		// google analytics
-		(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-48160008-2', 'alexdmejias.com');
+	  ga('send', 'pageview');
+
 	</script>
 </body>
 </html>
