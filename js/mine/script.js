@@ -109,7 +109,7 @@ $(document).ready(function(){
 		var id= $(this).attr('id');
 		if(Gen.locked[id]==false){
 			Gen.locked[id]=true;
-			$(this).css('color','black');
+			$(this).css('color','orangered');
 		} else {
 			Gen.locked[id]=false;
 			$(this).css('color','white');
