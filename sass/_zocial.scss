@@ -41,13 +41,13 @@ a.zocial {
 	text-decoration: none;
 	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
 	white-space: nowrap;
-	
+
 	-moz-user-select: none;
 	-webkit-user-select: none;
 	user-select: none;
-	
+
 	position: relative;
-	
+
 	-moz-border-radius: .3em;
 	-webkit-border-radius: .3em;
 	border-radius: .3em;
@@ -65,11 +65,11 @@ a.zocial {
 	text-align: center;
 	text-decoration: none;
 	text-transform: none;
-	
+
 	-moz-box-shadow: 0.075em 0 0 rgba(255,255,255,0.25);
 	-webkit-box-shadow: 0.075em 0 0 rgba(255,255,255,0.25);
 	box-shadow: 0.075em 0 0 rgba(255,255,255,0.25);
-	
+
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -91,7 +91,7 @@ a.zocial {
 	padding: 0;
 	width: 2em;
 	height: 2em;
-	
+
 	box-shadow: none;
 	border: none;
 }
@@ -128,7 +128,6 @@ a.zocial {
 /* Adjustments for light background buttons */
 
 .zocial.github,
-.zocial.reddit,
 .zocial.secondary{
 	border: 1px solid #aaa;
 	border-color: rgba(0,0,0,0.3);
@@ -144,8 +143,6 @@ a.zocial {
 
 .zocial.github:focus,
 .zocial.github:hover,
-.zocial.reddit:focus,
-.zocial.reddit:hover,
 .zocial.secondary:focus,
 .zocial.secondary:hover,
 .zocial.twitter:focus{
@@ -160,7 +157,6 @@ a.zocial {
 /* :active adjustments for light background buttons */
 
 .zocial.github:active,
-.zocial.reddit:active,
 .zocial.secondary:active{
 	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0)), color-stop(30%, rgba(255,255,255,0)), color-stop(50%, rgba(0,0,0,0)), to(rgba(0,0,0,0.1)));
 	background-image: -moz-linear-gradient(bottom, rgba(255,255,255,0), rgba(255,255,255,0) 30%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.1));
@@ -172,16 +168,12 @@ a.zocial {
 
 /* Button icon and color */
 /* Icon characters are stored in unicode private area */
-.zocial.facebook:before {content: "\E045";}
 .zocial.github:before {content: "\E046";}
-.zocial.reddit:before {content: "\E01D"; color: red;}
 .zocial.twitter:before {content: "\E033";}
 
 /* Button background and text color */
 
-.zocial.facebook {background-color: #4863ae;}
 .zocial.github {background-color: #fbfbfb; color: #050505;}
-.zocial.reddit {background-color: #fff; color: #222;}
 .zocial.twitter {background-color: #46c0fb;}
 
 /*
